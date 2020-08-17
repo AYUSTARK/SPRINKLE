@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CartActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="#FFFFFF"
+        app:title="My Cart"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_scrollFlags="scroll|enterAlways" />
+    <LinearLayout
+        android:id="@+id/disc"
+        android:layout_width="match_parent"
+        android:layout_below="@id/Toolbar"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ordering_from"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:padding="15dp"/>
+        <TextView
+            android:id="@+id/txtRestarunName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Restaurant Name"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="15dp"/>
+    </LinearLayout>
+    <View
+        android:layout_below="@id/disc"
+        android:layout_width="match_parent"
+        android:layout_height="2.5dp"
+        android:background="@color/colorPrimaryDark"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerCart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/disc"
+        android:layout_above="@id/btnPlaceOrder"
+        android:layout_marginVertical="10dp"/>
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Order(Total: Rs.00)"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#ffffff"
+        android:visibility="visible"
+        android:background="@color/colorPrimary"/>
+    <RelativeLayout
+        android:id="@+id/rlFinal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_order_placed"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/success"
+            android:layout_below="@id/done"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:textSize="18sp"/>
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/ok"
+            android:elevation="100dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_border"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

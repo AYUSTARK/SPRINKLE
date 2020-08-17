@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/extra"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".fragment.HistoryFragment">
+    <TextView
+        android:id="@+id/txtTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your previous orders are listed below:"
+        android:textSize="20sp"
+        android:paddingVertical="15dp"
+        android:layout_marginStart="5dp"/>
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/txtTop"
+        android:background="#000"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerHistory1"
+        android:layout_width="match_parent"
+        android:background="#E2FFDD33"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:layout_margin="10dp"/>
+    <RelativeLayout
+        android:id="@+id/ProgressLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/line"
+        android:background="#fff">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+</RelativeLayout>

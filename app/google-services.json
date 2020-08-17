@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "398507860328",
+    "firebase_url": "https://testwork-e7dd1.firebaseio.com",
+    "project_id": "testwork-e7dd1",
+    "storage_bucket": "testwork-e7dd1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398507860328:android:8119e421b23e6245e176dd",
+        "android_client_info": {
+          "package_name": "com.ayustark.foodapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398507860328-uhu9o4h682380ftngt60au4borsl64sa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ayustark.foodapp",
+            "certificate_hash": "397825f59011b8d42288ab84d8019ee7cc989466"
+          }
+        },
+        {
+          "client_id": "398507860328-7ldfrs9584sp5vbvigfmpgqerfd8bu61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBbBJ77QvKiO_Z-q8XOm8Mk1NYxMSNnIYU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398507860328-7ldfrs9584sp5vbvigfmpgqerfd8bu61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

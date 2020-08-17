@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".activity.MenuActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="#FFFFFF"
+        app:title="Restaurant Name"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_scrollFlags="scroll|enterAlways" />
+
+    <TextView
+        android:id="@+id/txtRestarunName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:layout_below="@id/Toolbar"
+        android:layout_marginTop="4dp"
+        android:textStyle="bold"
+        android:padding="7dp"
+        android:text="@string/choose_from_menu_listed_below"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imgBtnFav"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/Toolbar"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/ic_fav1" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtRestarunName"
+        android:background="#000"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtRestarunName"
+        android:layout_above="@id/btnCart"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
+    <Button
+        android:id="@+id/btnCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/proceed_to_cart"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#ffffff"
+        android:padding="10dp"
+        android:background="@color/colorPrimary"/>
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Toolbar"
+        android:background="#ffffff">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>
